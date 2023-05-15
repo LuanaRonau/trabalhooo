@@ -1,6 +1,4 @@
 from telas.tela_funcionarios import TelaFuncionario
-from datetime import date
-
 
 class TelaFuncomum(TelaFuncionario):
 
@@ -25,23 +23,3 @@ class TelaFuncomum(TelaFuncionario):
 
     def listagem(self, nome, cpf, data_nasc):
         print(f"Nome: {nome}\nCPF: {cpf}\nData_nasc: {data_nasc}\n")
-
-    def pega_cargo(self, lista_cargos):
-        print('\n=== Cargos disponíveis ===')
-        index = 1
-        for cargo in lista_cargos:
-            print(f'{index}. {cargo.titulo}')
-            index += 1
-        print('\n')
-        opcao = self.le_intervalo(1, index, "Escolha uma opção: ")
-        return opcao
-
-    #implementar no código
-    def verifica_idade(self, data_nasc: date):
-        idade = date.today() - data_nasc
-        dezoito_anos = 6570  # dias
-        if idade.days < dezoito_anos:
-            print("Pessoa não possui a idade necessária")
-            return None
-        else:
-            return data_nasc

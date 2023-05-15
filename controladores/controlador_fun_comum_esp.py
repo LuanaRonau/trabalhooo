@@ -60,13 +60,10 @@ class ControladorFunComumEsp:
         empregador = self.__controlador_filial.filial.gerente
         filial = self.__controlador_filial.filial
         cargo = self.__controlador_sistema.controlador_cargo.seleciona_cargo()
-        # cargos = self.__controlador_sistema.controlador_fun_comum.fun_comuns_cargos
-        # cargo_index = self.__tela_fun_comum.pega_cargo(cargos)
-        # cargo = cargos[cargo_index - 1]
-        # não entendi :) ^
+        id = self.__tela_fun_comum.gera_id()
 
         dados_contrato = {'data_inicio': data_inicio, 'cargo': cargo, 'empregado': novo_funcionario,
-                          'filial': filial, 'empregador': empregador}
+                          'filial': filial, 'empregador': empregador, 'id': id}
         self.__controlador_contrato.incluir_contrato(dados_contrato)
 
     def demitir(self):

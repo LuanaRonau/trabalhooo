@@ -8,32 +8,32 @@ class FunComum(Funcionario):
 
     @property
     def nome(self):
-        return super().nome
+        return self._Funcionario__nome
 
     @property
     def cpf(self):
-        return super().cpf
+        return self._Funcionario__cpf
 
     @property
     def data_nasc(self):
-        return super().data_nasc
+        return self._Funcionario__data_nasc
 
     @property
     def atividade(self):
-        return super().atividade
+        return self._Funcionario__atividade
 
     @nome.setter
     def nome(self, nome):
-        self.__nome = nome
+        self._Funcionario__nome = nome
 
     @cpf.setter
     def cpf(self, cpf: str):
-        super().cpf = cpf
+        self._Funcionario__cpf = cpf
 
     @data_nasc.setter
     def data_nasc(self, data_nasc: str):
-        super().data_nasc = data_nasc
+        self._Funcionario__data_nasc = data_nasc
 
     @atividade.setter
     def atividade(self, atividade: bool):
-        super().atividade = atividade
+        self._Funcionario__atividade = atividade

@@ -52,7 +52,7 @@ class ControladorSistema:
     def inicializa_sistema(self):
         lista_opcoes = {1: self.adicionar_filial, 2: self.excluir_filial,
                         3: self.modificar_filial, 4: self.listar_por_atv,
-                        5: self.modificar_cargos, 0: self.sair}
+                        5: self.gerenciamento_cargos, 0: self.sair}
 
         while True:
             opcao_escolhida = self.__tela_sistema.mostra_opcoes()
@@ -98,9 +98,6 @@ class ControladorSistema:
         else:
             self.__tela_sistema.mostra_mensagem('Lista vazia.\n')
 
-    def modificar_cargos(self):
-        ControladorCargo(self).abre_tela()
-
     # Método de checagem de repetição
     def checagem_repeticao_cep(self, cep):
         try:
@@ -132,6 +129,9 @@ class ControladorSistema:
                 raise NaoExistencia
             except NaoExistencia:
                 print('Filial não encontrada. Tente novamente.')
+
+    def gerenciamento_cargos(self):
+        self.__controlador_cargo.abre_tela()
 
     def sair(self):
         exit(0)

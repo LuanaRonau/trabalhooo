@@ -28,7 +28,8 @@ class ControladorCargo:
 
     def listar_cargos_comuns(self):
         if (len(self.__cargos) == 1):
-            print("A empresa ainda não possui cadastro de cargos de funcionários comuns no sistema.")
+            print("A empresa ainda não possui cadastro de cargos de funcionários comuns no sistema e por isso não será possível prosseguir. Retornando ao menu...")
+            self.retornar()
         else:
             for cargo in self.__cargos:
                 if cargo.titulo != "Gerente":

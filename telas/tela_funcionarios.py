@@ -1,4 +1,5 @@
 from telas.abstract_tela import AbstractTela
+from datetime import date
 
 
 class TelaFuncionario(AbstractTela):
@@ -19,8 +20,6 @@ class TelaFuncionario(AbstractTela):
         return opcao
 
     def pega_dados_cadastro(self):
-        print("Regras: 1. É necessário ser maior de 18 anos\n"
-              + "        2. Não é permitido contratar funcionários já demitidos\n")
         nome = input("Nome: ")
         cpf = super().le_cpf("CPF: ")
         data_nasc = super().le_data("Data de nascimento: ")
@@ -31,3 +30,4 @@ class TelaFuncionario(AbstractTela):
 
     def mostra_mensagem(self, msg):
         super().mostra_mensagem(msg)
+

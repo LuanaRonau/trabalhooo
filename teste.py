@@ -33,7 +33,8 @@ from datetime import timedelta, date
 hoje = date.today()
 # if hoje - date(2004, 5, 3) == timedelta()
 #
-idade = date.today() - data_nasc
-dezoito_anos = 6570 #dias
-if idade.days >= dezoito_anos:
-    print("yay")
+# idade = date.today() - data_nasc
+# dezoito_anos = 6570 #dias
+# if idade.days >= dezoito_anos:
+#     print("yay")
+

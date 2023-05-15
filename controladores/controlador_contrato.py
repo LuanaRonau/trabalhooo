@@ -110,7 +110,7 @@ class ControladorContrato:
         pass
 
     def retornar(self):
-        self.__control_sistema.abre_tela()
+        self.__control_sistema.inicializa_sistema()
 
     def abre_tela(self):
         lista_opcoes = {1: self.incluir_contrato, 2: self.alterar_contrato, 3: self.excluir_contrato,
