@@ -36,8 +36,11 @@ class TelaFuncomum(TelaFuncionario):
         opcao = self.le_intervalo(1, index, "Escolha uma opção: ")
         return opcao
 
+    #implementar no código
     def verifica_idade(self, data_nasc: date):
-        if (date.today() - data_nasc) < 18:
+        idade = date.today() - data_nasc
+        dezoito_anos = 6570  # dias
+        if idade.days < dezoito_anos:
             print("Pessoa não possui a idade necessária")
             return None
         else:

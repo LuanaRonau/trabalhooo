@@ -1,4 +1,4 @@
-from datetime import datetime, date
+from datetime import timedelta, date
 
 # data = input("data no formato ...: ")
 #
@@ -31,4 +31,9 @@ from datetime import datetime, date
 #
 # print(len(parteA))
 hoje = date.today()
-print(int(hoje - date(2004, 5, 3))
+# if hoje - date(2004, 5, 3) == timedelta()
+#
+idade = date.today() - data_nasc
+dezoito_anos = 6570 #dias
+if idade.days >= dezoito_anos:
+    print("yay")
